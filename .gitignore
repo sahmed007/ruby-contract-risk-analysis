@@ -1,0 +1,74 @@
+# Ignore bundler config
+/.bundle
+
+# Ignore default SQLite database
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore PID files, cache, and other temp data
+/tmp/pids/*
+/tmp/cache/*
+/tmp/sockets/*
+/tmp/storage/*
+!/tmp/pids/.keep
+!/tmp/cache/.keep
+!/tmp/sockets/.keep
+!/tmp/storage/.keep
+
+# Ignore uploaded files in development
+/storage/*
+!/storage/.keep
+
+# Ignore coverage reports
+/coverage/
+/spec/reports/
+
+# Ignore Capybara artifacts
+/capybara-*.html
+
+# Ignore system test screenshots
+/tmp/screenshots
+
+# Ignore dotenv environment variables
+.env
+.env.local
+.env.*.local
+
+# Ignore Byebug command history file
+.byebug_history
+
+# Ignore pry history
+.pry_history
+
+# Ignore IRB history
+.irb_history
+
+# Ignore rbenv version file
+.ruby-version
+
+# Ignore RubyMotion data
+/build/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore node_modules (if using JS tooling)
+node_modules/
+
+# Ignore yarn lockfile (if not using yarn in production)
+yarn.lock
+
+# Ignore overcommit config backups
+overcommit.yml~
+
+# Ignore JetBrains IDE files
+.idea/
