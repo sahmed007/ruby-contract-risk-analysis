@@ -25,4 +25,7 @@ class ExtractionSchema < RubyLLM::Schema
       string :title, description: 'Title or position of the signer'
     end
   end
+
+  # enrichments
+  string :summary, description: 'A generated detailed summary of the contract and its purpose'
 end

@@ -6,9 +6,13 @@ require 'async'
 require_relative 'lib/extraction_schema'
 require_relative 'lib/csv_exporter'
 
+# STEP 1: CONFIGURE RUBYLLM
+
 RubyLLM.configure do |config|
   config.openrouter_api_key = ENV.fetch('OPENROUTER_API_KEY', nil)
 end
+
+# STEP 2: EXTRACT INFORMATION FROM CONTRACTS
 
 # Get all PDF files from the contracts directory
 contract_files = Dir.glob('contracts/*.pdf')
@@ -35,12 +39,12 @@ end.result
 
 puts "Finished processing #{results.length} contract(s)"
 
-# Combine all extractions
 all_extractions = results.flat_map do |result|
   content = result[:content]
   content.is_a?(Array) ? content : [content]
 end
 
+# STEP 3: EXPORT TO CSV
 puts 'Exporting to CSV...'
 
 # Export all extractions to CSV in the outputs directory

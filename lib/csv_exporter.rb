@@ -53,6 +53,7 @@ class CsvExporter
       effective_date
       termination_notice
       term_length
+      summary
     ]
   end
 
@@ -86,7 +87,8 @@ class CsvExporter
       extraction['contract_type'],
       extraction['effective_date'],
       extraction['termination_notice'],
-      extraction['term_length']
+      extraction['term_length'],
+      extraction['summary']
     ]
   end
 
